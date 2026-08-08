@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy 16th Birthday, Love ♡</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Montserrat:wght@400;500;600;700&display=swap');
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:#09060b;
+  color:#fff;
+  font-family:Montserrat,Arial,sans-serif;
+  overflow-x:hidden;
+}
+body:before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(circle at 20% 10%,rgba(255,60,150,.18),transparent 30%),
+    radial-gradient(circle at 80% 70%,rgba(150,40,180,.15),transparent 35%),
+    linear-gradient(145deg,#160b1d,#070509 70%);
+}
+#stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
+.star{position:absolute;width:3px;height:3px;background:#fff;border-radius:50%;opacity:.45;animation:twinkle 3s infinite}
+@keyframes twinkle{50%{opacity:.08;transform:scale(.5)}}
+
+.screen{
+  min-height:100svh;
+  display:flex;align-items:center;justify-content:center;
+  padding:28px 20px;
+}
+.card{width:min(920px,100%);text-align:center}
+.eyebrow{letter-spacing:5px;font-size:12px;color:#eab7d4;text-transform:uppercase}
+h1{font-family:"DM Serif Display",serif;font-size:clamp(52px,12vw,100px);line-height:.95;margin:24px 0 18px}
+h2{font-family:"DM Serif Display",serif;font-size:clamp(38px,8vw,64px);margin:0 0 18px}
+p{line-height:1.8;color:#e6dce5}
+.heart{
+  font-size:90px;filter:drop-shadow(0 0 25px #ff3c98);
+  animation:beat 1.5s infinite;
+}
+@keyframes beat{50%{transform:scale(1.08)}}
+
+.btn{
+  display:inline-block;margin-top:24px;padding:17px 30px;border:0;border-radius:999px;
+  background:linear-gradient(90deg,#ff4da0,#c832ff);color:white;
+  font-weight:700;font-size:15px;letter-spacing:.5px;cursor:pointer;
+  box-shadow:0 12px 40px rgba(255,50,150,.28);
+}
+.hidden{display:none}
+.reveal{animation:reveal .9s ease both}
+@keyframes reveal{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+
+.gallery{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:30px
+}
+.gallery img{
+  width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:18px;
+  border:1px solid rgba(255,255,255,.12);transition:.35s;
+}
+.gallery img:hover{transform:scale(1.025);filter:brightness(1.08)}
+@media(max-width:650px){.gallery{grid-template-columns:repeat(2,1fr)}}
+
+.video-wrap{
+  margin:35px auto;max-width:760px;border-radius:24px;overflow:hidden;
+  border:1px solid rgba(255,255,255,.12);box-shadow:0 20px 80px rgba(0,0,0,.5)
+}
+video{display:block;width:100%;max-height:70svh;background:#000}
+
+.letter{
+  max-width:700px;margin:35px auto;padding:30px;
+  background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);
+  border-radius:24px;text-align:left;backdrop-filter:blur(10px)
+}
+.signature{font-family:"DM Serif Display",serif;font-size:30px;color:#ff8fc5}
+footer{padding:50px 20px;text-align:center;color:#a997a8;font-size:12px;letter-spacing:2px}
+
+#main{display:none}
+#musicBtn{
+  position:fixed;right:18px;bottom:18px;z-index:5;width:48px;height:48px;
+  border-radius:50%;border:1px solid rgba(255,255,255,.2);
+  background:rgba(20,10,20,.75);color:white;backdrop-filter:blur(8px)
+}
+</style>
+</head>
+<body>
+<div id="stars"></div>
+
+<section id="intro" class="screen">
+  <div class="card reveal">
+    <div class="heart">♥</div>
+    <div class="eyebrow">A little surprise for you</div>
+    <h1>Hey, Love...</h1>
+    <p>I made something special for you.<br>So before you do anything else… tap the button. ♡</p>
+    <button class="btn" onclick="openSurprise()">OPEN MY SURPRISE 💌</button>
+  </div>
+</section>
+
+<main id="main">
+  <section class="screen">
+    <div class="card reveal">
+      <div class="eyebrow">August 9 • Your special day</div>
+      <h2>Happy 16th Birthday, Love! 🎂</h2>
+      <p>
+        Today is all about celebrating you — the person who makes ordinary
+        moments feel a little more special. I hope this little website reminds
+        you how loved and appreciated you are.
+      </p>
+    </div>
+  </section>
+
+  <section class="screen">
+    <div class="card">
+      <div class="eyebrow">Our memories</div>
+      <h2>A few moments I want to keep</h2>
+      <div class="gallery">
+        <img src="photo1.jpg" alt="Memory 1">
+        <img src="photo2.jpg" alt="Memory 2">
+        <img src="photo3.jpg" alt="Memory 3">
+        <img src="photo4.jpg" alt="Memory 4">
+        <img src="photo5.jpg" alt="Memory 5">
+        <img src="photo6.jpg" alt="Memory 6">
+        <img src="photo7.jpg" alt="Memory 7">
+        <img src="photo8.jpg" alt="Memory 8">
+        <img src="photo9.jpg" alt="Memory 9">
+      </div>
+    </div>
+  </section>
+
+  <section class="screen">
+    <div class="card">
+      <div class="eyebrow">Press play</div>
+      <h2>For you ♡</h2>
+      <div class="video-wrap">
+        <video id="birthdayVideo" controls playsinline preload="metadata">
+          <source src="birthday-video.mp4" type="video/mp4">
+          Your browser does not support video playback.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <section class="screen">
+    <div class="card">
+      <div class="eyebrow">A little message</div>
+      <h2>Dear Love,</h2>
+      <div class="letter">
+        <p>
+          Happy birthday! I hope your 16th birthday is filled with genuine
+          smiles, peaceful moments, and memories you'll want to keep forever.
+        </p>
+        <p>
+          Thank you for all the little moments, the laughs, the memories, and
+          for simply being you. You deserve good things, today and on all the
+          ordinary days that come after this one.
+        </p>
+        <p>
+          Keep chasing the things that make you happy. Keep being the person
+          you are. And whenever life gets a little difficult, I hope you
+          remember that there are people who are genuinely happy that you're
+          here.
+        </p>
+        <p>Enjoy your day, Love. This little surprise is just for you. ♡</p>
+        <div class="signature">Always cheering for you ♥</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>MADE WITH LOVE • HAPPY 16TH BIRTHDAY</footer>
+</main>
+
+<button id="musicBtn" onclick="toggleMusic()" aria-label="Music">♪</button>
+
+<script>
+const stars=document.getElementById('stars');
+for(let i=0;i<70;i++){
+  const s=document.createElement('span');s.className='star';
+  s.style.left=Math.random()*100+'%';s.style.top=Math.random()*100+'%';
+  s.style.animationDelay=(Math.random()*3)+'s';stars.appendChild(s);
+}
+
+function openSurprise(){
+  document.getElementById('intro').style.display='none';
+  document.getElementById('main').style.display='block';
+  window.scrollTo(0,0);
+  burst();
+}
+
+function burst(){
+  for(let i=0;i<30;i++){
+    const e=document.createElement('div');
+    e.textContent=['♥','✦','♡','✨'][Math.floor(Math.random()*4)];
+    e.style.cssText=`position:fixed;left:${45+Math.random()*10}%;top:45%;
+      z-index:20;color:#ff75b8;font-size:${14+Math.random()*20}px;
+      pointer-events:none;transition:all 1.4s ease;`;
+    document.body.appendChild(e);
+    requestAnimationFrame(()=>{e.style.transform=`translate(${(Math.random()-.5)*500}px,${(Math.random()-.5)*500}px) rotate(${Math.random()*360}deg)`;e.style.opacity=0});
+    setTimeout(()=>e.remove(),1500);
+  }
+}
+function toggleMusic(){
+  const v=document.getElementById('birthdayVideo');
+  if(v.paused){v.play().catch(()=>{});document.getElementById('musicBtn').textContent='❚❚'}
+  else{v.pause();document.getElementById('musicBtn').textContent='♪'}
+}
+</script>
+</body>
+</html>
